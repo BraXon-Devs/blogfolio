@@ -4,6 +4,7 @@
     }
     &__title {
         @extend .page__title;
+        text-wrap: balance;
         @include mq(lg) {
             font-size: 6rem !important;
         }
@@ -21,6 +22,10 @@
             font-size: 1.25rem;
         }
     }
+    &__canonical {
+        margin: 1rem 0;
+        color: var(--color-text-offset);
+    }
     &__tags {
         font-family: Georgia, Times, serif;
         text-transform: uppercase;
@@ -33,6 +38,10 @@
     &__content {
         @include container-narrow;
     }
+    &__disclaimer {
+        margin-top: 2rem;
+        @include container-narrow;
+    }
     &__footer {
         @include container-narrow;
         display: flex;
@@ -40,12 +49,17 @@
         justify-content: space-between;
         align-items: center;
         margin: 2rem auto;
-
-        &__info {
-            margin: 1rem 0;
-            color: var(--color-text-offset);
-            font-style: italic;
-        }
+    }
+    &__footer-info {
+        margin: 1rem 0;
+        color: var(--color-text-offset);
+        font-style: italic;
+    }
+    &__footer-incomplete {
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 2rem;
     }
 }
 
